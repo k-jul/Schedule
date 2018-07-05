@@ -1,0 +1,21 @@
+.header {
+padding: 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border:1px solid lightgrey;
+box-shadow: 2px 2px 2px lightgrey;
+background-color: #fff;
+}
+
+.avatar {
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

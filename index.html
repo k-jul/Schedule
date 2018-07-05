@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schedule</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <link href="./dist/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img class = "avatar" src="./dist/img/photo.jpg" alt="user-avatar">
+            <div class = "user">
+            <h2 class = "user-name">Yuliia Kuznietsova</h2>
+            <h3 class = "user-position">physician</h3>
+           </div>
+            <p>contact information</p>
+        </header>
+        <main class="main">
+            <h2 class="schedule">My working week</h2>
+            <p id="message">Please choose the day: </p>
+            <div class="week">
+                <div class="week-day">
+                    <button class="week-day-btn" id="mon">Mon</button>
+                    <div class="time-range">
+                        <input class="mon timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="mon__0"></div>
+                        <div class="scale-item" id="mon__1"></div>
+                        <div class="scale-item" id="mon__2"></div>
+                        <div class="scale-item" id="mon__3"></div>
+                        <div class="scale-item" id="mon__4"></div>
+                        <div class="scale-item" id="mon__5"></div>
+                        <div class="scale-item" id="mon__6"></div>
+                        <div class="scale-item" id="mon__7"></div>
+                        <div class="scale-item" id="mon__8"></div>
+                        <div class="scale-item" id="mon__9"></div>
+                        <div class="scale-item" id="mon__10"></div>
+                        <div class="scale-item" id="mon__11"></div>
+                        <div class="scale-item" id="mon__12"></div>
+                        <div class="scale-item" id="mon__13"></div>
+                        <div class="scale-item" id="mon__14"></div>
+                        <div class="scale-item" id="mon__15"></div>
+                        <div class="scale-item" id="mon__16"></div>
+                        <div class="scale-item" id="mon__17"></div>
+                        <div class="scale-item" id="mon__18"></div>
+                        <div class="scale-item" id="mon__19"></div>
+                        <div class="scale-item" id="mon__20"></div>
+                        <div class="scale-item" id="mon__21"></div>
+                        <div class="scale-item" id="mon__22"></div>
+                        <div class="scale-item" id="mon__23"></div>
+                        <div class="scale-item" id="mon__24"></div>
+                    </div>
+                    <div class = "controls">
+                    <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                    <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                    <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="tue">Tue</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="tue__0"></div>
+                        <div class="scale-item" id="tue__1"></div>
+                        <div class="scale-item" id="tue__2"></div>
+                        <div class="scale-item" id="tue__3"></div>
+                        <div class="scale-item" id="tue__4"></div>
+                        <div class="scale-item" id="tue__5"></div>
+                        <div class="scale-item" id="tue__6"></div>
+                        <div class="scale-item" id="tue__7"></div>
+                        <div class="scale-item" id="tue__8"></div>
+                        <div class="scale-item" id="tue__9"></div>
+                        <div class="scale-item" id="tue__10"></div>
+                        <div class="scale-item" id="tue__11"></div>
+                        <div class="scale-item" id="tue__12"></div>
+                        <div class="scale-item" id="tue__13"></div>
+                        <div class="scale-item" id="tue__14"></div>
+                        <div class="scale-item" id="tue__15"></div>
+                        <div class="scale-item" id="tue__16"></div>
+                        <div class="scale-item" id="tue__17"></div>
+                        <div class="scale-item" id="tue__18"></div>
+                        <div class="scale-item" id="tue__19"></div>
+                        <div class="scale-item" id="tue__20"></div>
+                        <div class="scale-item" id="tue__21"></div>
+                        <div class="scale-item" id="tue__22"></div>
+                        <div class="scale-item" id="tue__23"></div>
+                        <div class="scale-item" id="tue__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="wed">Wednesday</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="wed__0"></div>
+                        <div class="scale-item" id="wed__1"></div>
+                        <div class="scale-item" id="wed__2"></div>
+                        <div class="scale-item" id="wed__3"></div>
+                        <div class="scale-item" id="wed__4"></div>
+                        <div class="scale-item" id="wed__5"></div>
+                        <div class="scale-item" id="wed__6"></div>
+                        <div class="scale-item" id="wed__7"></div>
+                        <div class="scale-item" id="wed__8"></div>
+                        <div class="scale-item" id="wed__9"></div>
+                        <div class="scale-item" id="wed__10"></div>
+                        <div class="scale-item" id="wed__11"></div>
+                        <div class="scale-item" id="wed__12"></div>
+                        <div class="scale-item" id="wed__13"></div>
+                        <div class="scale-item" id="wed__14"></div>
+                        <div class="scale-item" id="wed__15"></div>
+                        <div class="scale-item" id="wed__16"></div>
+                        <div class="scale-item" id="wed__17"></div>
+                        <div class="scale-item" id="wed__18"></div>
+                        <div class="scale-item" id="wed__19"></div>
+                        <div class="scale-item" id="wed__20"></div>
+                        <div class="scale-item" id="wed__21"></div>
+                        <div class="scale-item" id="wed__22"></div>
+                        <div class="scale-item" id="wed__23"></div>
+                        <div class="scale-item" id="wed__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="thu">Thuesday</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="thu__0"></div>
+                        <div class="scale-item" id="thu__1"></div>
+                        <div class="scale-item" id="thu__2"></div>
+                        <div class="scale-item" id="thu__3"></div>
+                        <div class="scale-item" id="thu__4"></div>
+                        <div class="scale-item" id="thu__5"></div>
+                        <div class="scale-item" id="thu__6"></div>
+                        <div class="scale-item" id="thu__7"></div>
+                        <div class="scale-item" id="thu__8"></div>
+                        <div class="scale-item" id="thu__9"></div>
+                        <div class="scale-item" id="thu__10"></div>
+                        <div class="scale-item" id="thu__11"></div>
+                        <div class="scale-item" id="thu__12"></div>
+                        <div class="scale-item" id="thu__13"></div>
+                        <div class="scale-item" id="thu__14"></div>
+                        <div class="scale-item" id="thu__15"></div>
+                        <div class="scale-item" id="thu__16"></div>
+                        <div class="scale-item" id="thu__17"></div>
+                        <div class="scale-item" id="thu__18"></div>
+                        <div class="scale-item" id="thu__19"></div>
+                        <div class="scale-item" id="thu__20"></div>
+                        <div class="scale-item" id="thu__21"></div>
+                        <div class="scale-item" id="thu__22"></div>
+                        <div class="scale-item" id="thu__23"></div>
+                        <div class="scale-item" id="thu__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="fr">Friday</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="fr__0"></div>
+                        <div class="scale-item" id="fr__1"></div>
+                        <div class="scale-item" id="fr__2"></div>
+                        <div class="scale-item" id="fr__3"></div>
+                        <div class="scale-item" id="fr__4"></div>
+                        <div class="scale-item" id="fr__5"></div>
+                        <div class="scale-item" id="fr__6"></div>
+                        <div class="scale-item" id="fr__7"></div>
+                        <div class="scale-item" id="fr__8"></div>
+                        <div class="scale-item" id="fr__9"></div>
+                        <div class="scale-item" id="fr__10"></div>
+                        <div class="scale-item" id="fr__11"></div>
+                        <div class="scale-item" id="fr__12"></div>
+                        <div class="scale-item" id="fr__13"></div>
+                        <div class="scale-item" id="fr__14"></div>
+                        <div class="scale-item" id="fr__15"></div>
+                        <div class="scale-item" id="fr__16"></div>
+                        <div class="scale-item" id="fr__17"></div>
+                        <div class="scale-item" id="fr__18"></div>
+                        <div class="scale-item" id="fr__19"></div>
+                        <div class="scale-item" id="fr__20"></div>
+                        <div class="scale-item" id="fr__21"></div>
+                        <div class="scale-item" id="fr__22"></div>
+                        <div class="scale-item" id="fr__23"></div>
+                        <div class="scale-item" id="fr__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="sat">Saturday</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="sat__0"></div>
+                        <div class="scale-item" id="sat__1"></div>
+                        <div class="scale-item" id="sat__2"></div>
+                        <div class="scale-item" id="sat__3"></div>
+                        <div class="scale-item" id="sat__4"></div>
+                        <div class="scale-item" id="sat__5"></div>
+                        <div class="scale-item" id="sat__6"></div>
+                        <div class="scale-item" id="sat__7"></div>
+                        <div class="scale-item" id="sat__8"></div>
+                        <div class="scale-item" id="sat__9"></div>
+                        <div class="scale-item" id="sat__10"></div>
+                        <div class="scale-item" id="sat__11"></div>
+                        <div class="scale-item" id="sat__12"></div>
+                        <div class="scale-item" id="sat__13"></div>
+                        <div class="scale-item" id="sat__14"></div>
+                        <div class="scale-item" id="sat__15"></div>
+                        <div class="scale-item" id="sat__16"></div>
+                        <div class="scale-item" id="sat__17"></div>
+                        <div class="scale-item" id="sat__18"></div>
+                        <div class="scale-item" id="sat__19"></div>
+                        <div class="scale-item" id="sat__20"></div>
+                        <div class="scale-item" id="sat__21"></div>
+                        <div class="scale-item" id="sat__22"></div>
+                        <div class="scale-item" id="sat__23"></div>
+                        <div class="scale-item" id="sat__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+                <div class="week-day">
+                    <button class="week-day-btn" id="sun">Sunday</button>
+                    <div class="time-range">
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                    </div>
+                    <div class="scale">
+                        <div class="scale-item" id="sun__0"></div>
+                        <div class="scale-item" id="sun__1"></div>
+                        <div class="scale-item" id="sun__2"></div>
+                        <div class="scale-item" id="sun__3"></div>
+                        <div class="scale-item" id="sun__4"></div>
+                        <div class="scale-item" id="sun__5"></div>
+                        <div class="scale-item" id="sun__6"></div>
+                        <div class="scale-item" id="sun__7"></div>
+                        <div class="scale-item" id="sun__8"></div>
+                        <div class="scale-item" id="sun__9"></div>
+                        <div class="scale-item" id="sun__10"></div>
+                        <div class="scale-item" id="sun__11"></div>
+                        <div class="scale-item" id="sun__12"></div>
+                        <div class="scale-item" id="sun__13"></div>
+                        <div class="scale-item" id="sun__14"></div>
+                        <div class="scale-item" id="sun__15"></div>
+                        <div class="scale-item" id="sun__16"></div>
+                        <div class="scale-item" id="sun__17"></div>
+                        <div class="scale-item" id="sun__18"></div>
+                        <div class="scale-item" id="sun__19"></div>
+                        <div class="scale-item" id="sun__20"></div>
+                        <div class="scale-item" id="sun__21"></div>
+                        <div class="scale-item" id="sun__22"></div>
+                        <div class="scale-item" id="sun__23"></div>
+                        <div class="scale-item" id="sun__24"></div>
+                    </div>
+                    <div class = "controls">
+                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
+                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
+                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
+                        </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>

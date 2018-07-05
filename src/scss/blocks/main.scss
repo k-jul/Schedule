@@ -1,0 +1,93 @@
+
+.main {
+    padding: 30px;
+    background-color: #ECECEE;
+
+}
+
+.schedule {
+text-align: center
+}
+
+.week {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-day {
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 20px;
+        border:1px solid lightgrey;
+        box-shadow: 2px 2px 2px lightgrey;
+        background-color: #fff;
+
+        &-btn {
+            outline:none;
+            width: 20%;
+            height: 50px;
+            border-radius: 5px;
+            margin: 10px 20px 10px 0;
+            background-color: $buttonColor;
+        }
+    }
+}
+
+.time-range {
+    font-family: "Arial";
+    font-size:16px;
+    display: flex;
+    flex-direction: column;
+
+    &-start, &-end {
+        display: block;
+    }
+}
+
+.timepicker {
+    width: 90px;
+}
+.ui-corner-all {
+    font-family: "Arial";
+    font-size:16px;
+}
+
+.scale {
+    width: 30vw;
+    margin-left: 20px;
+    display: flex;
+    height: 15px;
+
+    &-item {
+        border: 1px solid black;
+        flex-grow:1;
+    }
+}
+
+.btn {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px; 
+
+    &-save {
+        background-color: #00A6EB;
+
+    }
+
+    &-edit {
+        background-color:#00A97B;
+        display:none;
+    }
+
+    &-cancel {
+        background-color: #E25424;
+    }
+}
+
+

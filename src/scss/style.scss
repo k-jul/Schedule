@@ -1,0 +1,16 @@
+// libraries
+@import "normalize";
+
+// common
+@import "./common/variables.scss";
+@import "./common/global.scss";
+
+//page layout
+@import "./layout/layout.scss";
+
+//blocks
+@import "./blocks/header.scss";
+@import "./blocks/main.scss";
+
+// //media
+// @import "./common/media.scss";

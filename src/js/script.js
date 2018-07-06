@@ -64,11 +64,6 @@ $(".btn-add").click(function (e) {
     let timeRange = $(this).parent();
     let weekDayId = timeRange.prev().attr('id');
 
-    if (shifts[weekDayId].length === 0) {
-        alert("Please pick the shift");
-        return;
-    }
-
     let startValue = timeRange.children()[0].value;
     let endValue = timeRange.children()[1].value;
 

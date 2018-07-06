@@ -545,5 +545,63 @@ body {
     color: #00A97B;
     margin-left: 5px; }
   .btn-delete {
-    margin-left: 20px;
+    margin-left: 5px;
     color: #E25424; }
+
+@media screen and (max-width: 780px) {
+  .week-day {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .scale {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 75vw;
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 680px) {
+  .avatar {
+    width: 13vh;
+    height: 13vh; }
+  .user-name {
+    font-size: 20px; }
+  .user-position {
+    font-size: 16px; }
+  .user-phone {
+    font-size: 14px; } }
+
+@media screen and (max-width: 580px) {
+  .scale-item:nth-child(7)::after {
+    right: -2px; }
+  .scale-item:nth-child(13)::after {
+    right: 0px; }
+  .scale-item:nth-child(19)::after {
+    right: 0px; } }
+
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 20px 5px; }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .user-phone {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .week-day {
+    padding: 20px 15px 20px 20px; } }

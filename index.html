@@ -33,8 +33,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="mon">Mon</button>
                     <div class="time-range">
-                        <input class="mon timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="mon timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="mon__0"></div>
@@ -61,7 +61,6 @@
                         <div class="scale-item" id="mon__21"></div>
                         <div class="scale-item" id="mon__22"></div>
                         <div class="scale-item" id="mon__23"></div>
-                        <div class="scale-item" id="mon__24"></div>
                     </div>
                     <div class = "controls">
                     <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -72,8 +71,9 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="tue">Tue</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" id = "tue-start">
+                        <input class="timepicker end-time" id = "tue-end" disabled>
+                        <button class = "btn btn-add">Add</button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="tue__0"></div>
@@ -100,7 +100,6 @@
                         <div class="scale-item" id="tue__21"></div>
                         <div class="scale-item" id="tue__22"></div>
                         <div class="scale-item" id="tue__23"></div>
-                        <div class="scale-item" id="tue__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -111,8 +110,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="wed">Wednesday</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="wed__0"></div>
@@ -139,7 +138,6 @@
                         <div class="scale-item" id="wed__21"></div>
                         <div class="scale-item" id="wed__22"></div>
                         <div class="scale-item" id="wed__23"></div>
-                        <div class="scale-item" id="wed__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -150,8 +148,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="thu">Thuesday</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="thu__0"></div>
@@ -178,7 +176,6 @@
                         <div class="scale-item" id="thu__21"></div>
                         <div class="scale-item" id="thu__22"></div>
                         <div class="scale-item" id="thu__23"></div>
-                        <div class="scale-item" id="thu__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -189,8 +186,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="fr">Friday</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="fr__0"></div>
@@ -217,7 +214,6 @@
                         <div class="scale-item" id="fr__21"></div>
                         <div class="scale-item" id="fr__22"></div>
                         <div class="scale-item" id="fr__23"></div>
-                        <div class="scale-item" id="fr__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -228,8 +224,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="sat">Saturday</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="sat__0"></div>
@@ -256,7 +252,6 @@
                         <div class="scale-item" id="sat__21"></div>
                         <div class="scale-item" id="sat__22"></div>
                         <div class="scale-item" id="sat__23"></div>
-                        <div class="scale-item" id="sat__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
@@ -267,8 +262,8 @@
                 <div class="week-day">
                     <button class="week-day-btn" id="sun">Sunday</button>
                     <div class="time-range">
-                        <input class="timepicker start-time">
-                        <input class="timepicker end-time" disabled>
+                        <input class="timepicker start-time" placeholder = "From">
+                        <input class="timepicker end-time" placeholder = "To" disabled>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="sun__0"></div>
@@ -295,7 +290,6 @@
                         <div class="scale-item" id="sun__21"></div>
                         <div class="scale-item" id="sun__22"></div>
                         <div class="scale-item" id="sun__23"></div>
-                        <div class="scale-item" id="sun__24"></div>
                     </div>
                     <div class = "controls">
                             <button class = "btn btn-edit"><i class="far fa-edit"></i></button>

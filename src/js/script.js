@@ -17,11 +17,8 @@ $(document).ready(function () {
             if ($(this).hasClass('start-time')) {
 
                 let $inputStart = $(this);
-
                 let hour = $(date.getHours());
-
                 const $inputEnd = $(this).next();
-
                 let startTime = +$inputStart.val().split(":")[0]
                 let endTime = date.getHours() === 0 ? 24 : date.getHours();
 
@@ -30,15 +27,12 @@ $(document).ready(function () {
             } else {
 
                 let $inputEnd = $(this);
+                const $inputStart = $(this).prev();
+                let startTime = +$inputStart.val().split(":")[0];
+                let endTime = date.getHours() === 0 ? 24 : date.getHours();
+                let range = $inputEnd.parent().next().children();
 
-
-                    const $inputStart = $(this).prev();
-
-                    let startTime = +$inputStart.val().split(":")[0];
-                    let endTime = date.getHours() === 0 ? 24 : date.getHours();
-                    let range = $inputEnd.parent().next().children();
-
-                    if (startTime >= endTime) alert('A shift should be at leeast 1 hour');
+                if (startTime >= endTime) alert('A shift should be at least 1 hour');
 
 
             }
@@ -60,10 +54,8 @@ let shifts = {
 $(".btn-add").click(function (e) {
 
     let newShift = [];
-
     let timeRange = $(this).parent();
     let weekDayId = timeRange.prev().attr('id');
-
     let startValue = timeRange.children()[0].value;
     let endValue = timeRange.children()[1].value;
 
@@ -78,22 +70,19 @@ $(".btn-add").click(function (e) {
 
 });
 
-function updateRange (day) {
+function updateRange(day) {
 
     let dayId = "#" + day;
-
     let scale = $(dayId).next().next().children();
-    console.log(scale);
 
     for (i = 0; i < shifts[day].length; i++) {
-        
+
         for (j = shifts[day][i][0]; j < shifts[day][i][1]; j++) {
 
-            if (j>18 && j<= 24 || j>=0 && j <=6) scale[j].style.background = "lightblue";
-           // debugger;
+            if (j >= 18 && j <= 24 || j >= 0 && j <= 5) scale[j].style.background = "lightblue";
             else scale[j].style.background = "#FAFF84";
         }
-}
+    }
 }
 
 $(".btn-delete").click(function (e) {
@@ -102,7 +91,5 @@ $(".btn-delete").click(function (e) {
     let day = $(this).attr("id").split("-")[0];
     $("#" + day).next().next().find(".scale-item").css("background", "#EBEBEE");
     shifts[day] = [];
-    
+
 });
-
-

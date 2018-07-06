@@ -1,5 +1,49 @@
 
+@media screen and (max-width: 880px) {
+
+    .scale-item {
+
+        &:nth-child(7)::after {
+
+            right:-2px;
+        }
+
+
+        &:nth-child(13)::after {
+
+            right:0px;
+        }
+
+        &:nth-child(19)::after {
+
+            right:0px;
+        
+        }
+}
+}
+
+
 @media screen and (max-width: 780px) {
+
+    .scale-item {
+
+        &:nth-child(7)::after {
+
+            right:4px;
+        }
+
+
+        &:nth-child(13)::after {
+
+            right:6px;
+        }
+
+        &:nth-child(19)::after {
+
+            right:6px;
+        
+        }
+}
 
     .week-day {
         flex-wrap: wrap;

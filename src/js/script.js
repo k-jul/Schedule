@@ -1,11 +1,3 @@
-function clearRange(selectedInput) {
-    selectedInput.parent().next().children().css("background", "none");
-}
-
-const store = {
-    'monday': [0, 6]
-};
-
 let eventCount = 0;
 $(document).ready(function () {
     $('input.timepicker').timepicker({
@@ -26,16 +18,12 @@ $(document).ready(function () {
 
                 let $inputStart = $(this);
 
-                clearRange($inputStart);
-
                 let hour = $(date.getHours());
 
                 const $inputEnd = $(this).next();
 
                 let startTime = +$inputStart.val().split(":")[0]
                 let endTime = date.getHours() === 0 ? 24 : date.getHours();
-
-                console.log(startTime, endTime);
 
                 $inputEnd.removeAttr('disabled');
 
@@ -44,70 +32,82 @@ $(document).ready(function () {
                 let $inputEnd = $(this);
 
 
-                    clearRange($inputEnd);
-
                     const $inputStart = $(this).prev();
 
                     let startTime = +$inputStart.val().split(":")[0];
                     let endTime = date.getHours() === 0 ? 24 : date.getHours();
                     let range = $inputEnd.parent().next().children();
 
-                    if (startTime >= endTime) console.log('Wrong!');
+                    if (startTime >= endTime) alert('A shift should be at leeast 1 hour');
 
-                    for (i = startTime; i < endTime; i++) {
-                        range[i].style.background = 'red';
-                    }
 
             }
-
-            // $inputEnd.timepicker().destroy();
-
-            // $inputEnd.timepicker({
-
-            //     timeFormat: 'HH:mm',
-            //     interval: 60,
-            //     minTime: `${hour[0]+1}:00`,
-            //     // maxTime: '11:00pm',
-            //     maxHour: '0',
-            //     defaultTime: `${hour[0]+1}:00`,
-            //     startTime: '0:00',
-            //     dynamic: true,
-            //     dropdown: true,
-            //     scrollbar: false,
-
-            //     change: function(endDate) {
-
-            //         clearRange($inputEnd);
-
-            //         let startTime = startDate.getHours();
-            //         let endTime = endDate.getHours();
-            //         let range = $inputEnd.parent().next().children();
-
-            //         for (i = startTime; i < endTime; i++) {
-            //             range[i].style.background = 'red';
-            //         }
-
-            //     }
-
-
-            // });
-
-
-
         }
     });
 
 });
 
-$(".btn-save").click(function (e) {
+let shifts = {
+    "mon": [],
+    "tue": [],
+    "wed": [],
+    "thu": [],
+    "fr": [],
+    "sat": [],
+    "sun": []
+}
 
-    let inputs = $(this).parent().prev().prev().children();
-    let startValue = inputs[0].value;
-    let endValue = inputs[1].value;
+$(".btn-add").click(function (e) {
 
-    console.log(startValue.split(':'));
+    let newShift = [];
 
+    let timeRange = $(this).parent();
+    let weekDayId = timeRange.prev().attr('id');
 
+    if (shifts[weekDayId].length === 0) {
+        alert("Please pick the shift");
+        return;
+    }
 
+    let startValue = timeRange.children()[0].value;
+    let endValue = timeRange.children()[1].value;
+
+    let start = +startValue.split(':')[0];
+    let end = +endValue.split(':')[0] === 0 ? 24 : +endValue.split(':')[0];
+
+    newShift.push(start, end);
+
+    shifts[weekDayId].push(newShift);
+
+    updateRange(weekDayId);
 
 });
+
+function updateRange (day) {
+
+    let dayId = "#" + day;
+
+    let scale = $(dayId).next().next().children();
+    console.log(scale);
+
+    for (i = 0; i < shifts[day].length; i++) {
+        
+        for (j = shifts[day][i][0]; j < shifts[day][i][1]; j++) {
+
+            if (j>18 && j<= 24 || j>=0 && j <=6) scale[j].style.background = "lightblue";
+           // debugger;
+            else scale[j].style.background = "#FAFF84";
+        }
+}
+}
+
+$(".btn-delete").click(function (e) {
+    let confirmation = confirm("Day schedule will be cleared. Continue?");
+    if (!confirmation) return;
+    let day = $(this).attr("id").split("-")[0];
+    $("#" + day).next().next().find(".scale-item").css("background", "#EBEBEE");
+    shifts[day] = [];
+    
+});
+
+

@@ -19,22 +19,25 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <img class = "avatar" src="./dist/img/photo.jpg" alt="user-avatar">
-            <div class = "user">
-            <h2 class = "user-name">Yuliia Kuznietsova</h2>
-            <h3 class = "user-position">physician</h3>
-           </div>
-            <p>contact information</p>
+            <div class="user">
+                <img class="avatar" src="./dist/img/photo.jpg" alt="user-avatar">
+                <h2 class="user-name">Yuliia Kuznietsova</h2>
+                <h3 class="user-position">physician</h3>
+            </div>
+            <p class="user-phone">
+                <i class="fas fa-mobile-alt"></i> +38 (068) 112-40-17</p>
         </header>
         <main class="main">
-            <h2 class="schedule">My working week</h2>
-            <p id="message">Please choose the day: </p>
+            <h2 class="schedule">Working week schedule</h2>
             <div class="week">
                 <div class="week-day">
-                    <button class="week-day-btn" id="mon">Mon</button>
+                    <h2 class="week-day-name" id="mon">Mon</h2>
                     <div class="time-range">
-                        <input class="mon timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="mon timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="mon__0"></div>
@@ -61,19 +64,19 @@
                         <div class="scale-item" id="mon__21"></div>
                         <div class="scale-item" id="mon__22"></div>
                         <div class="scale-item" id="mon__23"></div>
+                        <button class="btn btn-delete" title="Clear all shifts" id="mon-delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                    <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                    <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                    <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="tue">Tue</button>
+                    <h2 class="week-day-name" id="tue">Tue</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" id = "tue-start">
-                        <input class="timepicker end-time" id = "tue-end" disabled>
-                        <button class = "btn btn-add">Add</button>
+                        <input class="timepicker start-time" id="tue-start">
+                        <input class="timepicker end-time" id="tue-end" disabled>
+                        <button class="btn btn-add" title="Add shift">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="tue__0"></div>
@@ -100,18 +103,19 @@
                         <div class="scale-item" id="tue__21"></div>
                         <div class="scale-item" id="tue__22"></div>
                         <div class="scale-item" id="tue__23"></div>
+                        <button class="btn btn-delete" id="tue-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="wed">Wednesday</button>
+                    <h2 class="week-day-name" id="wed">Wed</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="wed__0"></div>
@@ -138,18 +142,19 @@
                         <div class="scale-item" id="wed__21"></div>
                         <div class="scale-item" id="wed__22"></div>
                         <div class="scale-item" id="wed__23"></div>
+                        <button class="btn btn-delete" id="wed-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="thu">Thuesday</button>
+                    <h2 class="week-day-name" id="thu">Thu</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="thu__0"></div>
@@ -176,18 +181,19 @@
                         <div class="scale-item" id="thu__21"></div>
                         <div class="scale-item" id="thu__22"></div>
                         <div class="scale-item" id="thu__23"></div>
+                        <button class="btn btn-delete" id="thu-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="fr">Friday</button>
+                    <h2 class="week-day-name" id="fr">Fr</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="fr__0"></div>
@@ -214,18 +220,19 @@
                         <div class="scale-item" id="fr__21"></div>
                         <div class="scale-item" id="fr__22"></div>
                         <div class="scale-item" id="fr__23"></div>
+                        <button class="btn btn-delete" id="fr-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="sat">Saturday</button>
+                    <h2 class="week-day-name" id="sat">Sat</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift" id="sat-delete">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="sat__0"></div>
@@ -252,18 +259,19 @@
                         <div class="scale-item" id="sat__21"></div>
                         <div class="scale-item" id="sat__22"></div>
                         <div class="scale-item" id="sat__23"></div>
+                        <button class="btn btn-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
                 <div class="week-day">
-                    <button class="week-day-btn" id="sun">Sunday</button>
+                    <h2 class="week-day-name" id="sun">Sun</h2>
                     <div class="time-range">
-                        <input class="timepicker start-time" placeholder = "From">
-                        <input class="timepicker end-time" placeholder = "To" disabled>
+                        <input class="timepicker start-time">
+                        <input class="timepicker end-time" disabled>
+                        <button class="btn btn-add" title="Add shift" id="sun-delete">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <div class="scale">
                         <div class="scale-item" id="sun__0"></div>
@@ -290,12 +298,10 @@
                         <div class="scale-item" id="sun__21"></div>
                         <div class="scale-item" id="sun__22"></div>
                         <div class="scale-item" id="sun__23"></div>
+                        <button class="btn btn-delete" title="Clear all shifts">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class = "controls">
-                            <button class = "btn btn-edit"><i class="far fa-edit"></i></button>
-                            <button class = "btn btn-save"><i class="far fa-save"></i></button>
-                            <button class = "btn btn-cancel"><i class="fas fa-ban"></i></button>
-                        </div>
                 </div>
             </div>
 
